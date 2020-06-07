@@ -1,0 +1,255 @@
+#navbar {
+  background: $white-color;
+  box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
+  z-index: 100;
+  position: relative;
+  button{
+    color: black;
+  }
+  .navbar {
+    position: relative;
+    padding: 0em;
+    .search-nav {
+      ul {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 30px;
+          background-color: #e7e7e7;
+          left: -10%;
+          top: 0%;
+        }
+        .search {
+          position: relative;
+          form {
+            position: absolute;
+            left: -15em;
+            top: 62px;
+            display: none;
+            border: none;
+            box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+            border-radius: 25px;
+            .input {
+              width: 300px;
+              height: 50px;
+              padding-left: 25px;
+              border: none;
+              border-radius: 25px;
+              outline: none;
+            }
+            a {
+              position: absolute;
+              right: 10px;
+              top: 3px;
+              font-size: 15px;
+            }
+          }
+        }
+        a {
+          padding: 8px 10px;
+          font-size: 18px;
+          text-decoration: none;
+          color: $navbar-black-color;
+        }
+      }
+    }
+    .navbar-brand {
+      img {
+        position: relative;
+        z-index: 1;
+        left: -15px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 92px;
+        width: 12em;
+        background-color: $primary-color;
+      }
+    }
+    .nav-item {
+      padding: 30px 25px;
+      a {
+        padding: 0;
+        font-weight: 800;
+        font-size: 13px;
+        color: $navbar-black-color;
+        display: block;
+        @include transition(all 0.55s ease-in-out);
+        &:hover {
+          color: $primary-color;
+          @include transition(all 0.35s ease-in-out);
+        }
+      }
+    }
+    .dropdown {
+      z-index: 1;
+      position: relative;
+      &:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        @include transition(all 0.35s ease-in-out);
+        transform: translateY(30px);
+      }
+      &:hover > .nav-link {
+        color: $primary-color;
+        @include transition(all 0.35s ease-in-out);
+        &::after {
+          content: "\f106";
+          color: $primary-color;
+          @include transition(all 0.55s ease-in-out);
+        }
+      }
+      .nav-link {
+        position: relative;
+        &::after {
+          font-family: "Font Awesome 5 Free";
+          content: "\f107";
+          display: inline-block;
+          vertical-align: middle;
+          color: black;
+          position: absolute;
+          right: -14px;
+          top: 0px;
+          @include transition(all 0.55s ease-in-out);
+        }
+      }
+      .hover-menu {
+        opacity: 0;
+        @include transition(all 0.35s ease-in-out);
+        visibility: hidden;
+        position: absolute;
+        width: 250px;
+        background: white;
+        font-size: 14px;
+        box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.15);
+        transform: translateY(10px);
+        li {
+          border-bottom: 1px solid rgba(196, 196, 196, 0.24);
+          padding: 0px;
+          &:last-child {
+            border: none;
+          }
+          a {
+            text-decoration: none;
+            color: $navbar-black-color;
+            padding: 10px 15px;
+            font-weight: 600;
+            &:hover {
+              color: $primary-color;
+              @include transition(all 0.35s ease-in-out);
+            }
+          }
+        }
+      }
+    }
+  }
+  .side-menu{
+    @include transition(all 0.3s ease-in-out);
+    padding: 50px;
+    width: 400px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 999;
+    background-color: $white-color;
+    height: 100%;
+    box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    transform: translateX(400px);
+    .close-side {
+      position: absolute;
+      right: 10%;
+      top: 4%;
+      font-size: 25px;
+      color: #f44336;
+    }
+    .content {
+      margin-bottom: 50px;
+      h4 {
+        display: block;
+        font-weight: 800;
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+        border-bottom: 1px dashed #dddddd;
+        color: $black-color;
+      }
+      color: $gray-color;
+    }
+
+    .side-contact-info {
+      li {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 30px;
+        &:last-child {
+          padding: 0;
+        }
+        .info {
+          span {
+            display: block;
+            color: $black-color;
+            font-weight: 900;
+          }
+        }
+        .icon {
+          font-size: 40px;
+          color: $primary-color;
+          padding-right: 15px;
+        }
+      }
+    }
+    .side-additional-links {
+      li {
+        color: $black-color;
+        margin-bottom: 15px;
+        font-weight: 700;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+    .side-sosial {
+      ul {
+        display: flex;
+        flex-direction: row;
+        .facebook {
+          background-color: #3b5998;
+        }
+        .twitter {
+          background-color: #1da1f2;
+        }
+        .pinterest {
+          background-color: #bd081c;
+        }
+        .dribbble {
+          background-color: #ea4c89;
+        }
+        a {
+          display: block;
+          height: 40px;
+          width: 40px;
+          line-height: 40px;
+          text-align: center;
+          border-radius: 5px;
+          font-size: 13px;
+          margin-right: 5px;
+          margin-top: 5px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .open{
+    transform: translateX(17px);
+    @include transition(all 0.3s ease-in-out)
+  }
+}
+
+

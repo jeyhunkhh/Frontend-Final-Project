@@ -1,0 +1,7 @@
+@mixin transition($property) {
+    -webkit-transition: $property; // safari
+    -moz-transition: $property; // mozilla
+    -ms-transition: $property; // ie
+    -o-transition: $property; // opera
+    transition: $property; // chomre,yandex,edge
+}
