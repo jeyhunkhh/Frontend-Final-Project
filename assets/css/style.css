@@ -628,6 +628,7 @@ ul {
   border-top: 3px solid #437eeb;
   -webkit-box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
           box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+  border-bottom: none;
 }
 
 #about .tabs .tab-content h3 {
@@ -675,5 +676,33 @@ ul {
 
 #about .tabs .hide {
   display: none;
+}
+
+#fun-factor-area {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("http://thememine.net/themeforest/anada/assets/img/map.svg");
+  background-color: #f4f7fc;
+}
+
+#fun-factor-area .content {
+  text-align: center;
+}
+
+#fun-factor-area .content .numscroller {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 15px;
+  background: -webkit-linear-gradient(90deg, #031941 0%, #437eeb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#fun-factor-area .content span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #232323;
 }
 /*# sourceMappingURL=style.css.map */

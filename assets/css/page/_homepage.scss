@@ -177,7 +177,7 @@
 }
 
 #about {
-  background-color: #f4f7fc;
+  background-color: $section-background-color;
   h4 {
     font-weight: 800;
     color: $primary-color;
@@ -256,6 +256,7 @@
       background: #ffffff;
       border-top: 3px solid #437eeb;
       box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+      border-bottom: none;
       h3 {
         margin-bottom: 20px;
         font-weight: 700;
@@ -271,8 +272,33 @@
       }
     }
 
-    .hide{
- display: none;
+    .hide {
+      display: none;
+    }
+  }
+}
+
+#fun-factor-area {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url("http://thememine.net/themeforest/anada/assets/img/map.svg");
+  background-color: $section-background-color;
+  .content {
+    text-align: center;
+    .numscroller {
+      font-size: 50px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 15px;
+      background: -webkit-linear-gradient(90deg, rgba(3,25,65,1) 0%, rgba(67,126,235,1) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    span{
+      font-weight: 600;
+      font-size: 18px;
+      color: $black-color;
     }
   }
 }
