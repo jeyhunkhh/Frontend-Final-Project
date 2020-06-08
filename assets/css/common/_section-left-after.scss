@@ -1,0 +1,11 @@
+@mixin section-left-after($after-color){
+    position: absolute;
+    left: -30px;
+    top: -1%;
+    content: "";
+    height: 102%;
+    width: 100px;
+    background: $after-color;
+    z-index: -1;
+    border-radius: 50px;
+}

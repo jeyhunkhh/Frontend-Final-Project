@@ -35,7 +35,7 @@
             if ( $.isFunction( settings.showFunction ) ){
                 if(
                     !$(this).hasClass('isShown')&&
-                    ($(window).outerHeight()+$('#scrollzipPoint').offset().top-settings.showShift)>($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))&&
+                    ($(window).outerHeight()+$('#scrollzipPoint').offset().top-(settings.showShift))>($(this).offset().top+((settings.wholeVisible)?$(this).outerHeight():0))&&
                     ($('#scrollzipPoint').offset().top+((settings.wholeVisible)?$(this).outerHeight():0))<($(this).outerHeight()+$(this).offset().top-settings.showShift)
                 ){
                     $(this).addClass('isShown');
