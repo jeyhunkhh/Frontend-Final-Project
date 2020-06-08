@@ -3,7 +3,7 @@
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
   z-index: 100;
   position: relative;
-  button{
+  button {
     color: black;
   }
   .navbar {
@@ -76,6 +76,7 @@
     .nav-item {
       padding: 30px 25px;
       a {
+        letter-spacing: 0.06em;
         padding: 0;
         font-weight: 800;
         font-size: 13px;
@@ -150,7 +151,7 @@
       }
     }
   }
-  .side-menu{
+  .side-menu {
     @include transition(all 0.3s ease-in-out);
     padding: 50px;
     width: 400px;
@@ -178,9 +179,7 @@
         margin-bottom: 25px;
         padding-bottom: 15px;
         border-bottom: 1px dashed #dddddd;
-        color: $black-color;
       }
-      color: $gray-color;
     }
 
     .side-contact-info {
@@ -246,10 +245,15 @@
       }
     }
   }
-  .open{
+  .open {
     transform: translateX(17px);
-    @include transition(all 0.3s ease-in-out)
+    @include transition(all 0.3s ease-in-out);
+  }
+  .active {
+    color: $primary-color !important;
+  }
+  a.active::after {
+    color: $primary-color !important;
   }
 }
-
 

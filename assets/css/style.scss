@@ -3,6 +3,9 @@
 @import 'common/mixins';
 @import "common/default";
 @import "common/font";
+@import "common/button";
 
 // sections
-@import "sections/header"
+@import "sections/header";
+
+@import "page/homepage";
