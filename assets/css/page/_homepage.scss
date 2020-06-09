@@ -288,7 +288,7 @@
   padding-bottom: 90px;
   position: relative;
   &::after {
-    @include section-left-after(#f4f7fc);
+    @include section-left-after($section-background-color);
   }
   .services-header {
     margin-bottom: 60px;
@@ -505,7 +505,7 @@
   @extend %section-padding;
   position: relative;
   &::after {
-    @include section-left-after(#f4f7fc);
+    @include section-left-after($section-background-color);
   }
   .skill-content {
     overflow: hidden;
@@ -553,7 +553,7 @@
     z-index: 1;
     padding-bottom: 100px;
     padding-left: 35px;
-    &::after{
+    &::after {
       position: absolute;
       right: -40px;
       top: 35px;
@@ -580,5 +580,186 @@
       width: auto;
     }
   }
- 
+}
+
+#testimonials {
+  @extend %section-padding;
+  padding-top: 0;
+  .testimonials-header {
+    margin-bottom: 60px;
+    h4 {
+      font-weight: 800;
+      color: #437eeb;
+      font-size: 20px;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      margin-bottom: 15px;
+      &::before {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: "";
+        height: 10px;
+        width: 100%;
+        background: #437eeb;
+        z-index: -1;
+        opacity: 0.1;
+      }
+    }
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+    }
+  }
+  #carouselExampleIndicators {
+    position: relative;
+    padding-bottom: 120px;
+    .carousel-item {
+      .icon {
+        display: inline-block;
+        background: #edf5ff none repeat scroll 0 0;
+        height: 70px;
+        line-height: 70px;
+        width: 70px;
+        font-style: normal;
+        font-size: 24px;
+        color: $primary-color;
+        border-radius: 50%;
+        position: relative;
+        margin-bottom: 30px;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          bottom: -8px;
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 10px 10px 0 10px;
+          border-color: #edf5ff transparent transparent transparent;
+          margin-left: -10px;
+        }
+      }
+      h4 {
+        font-weight: 700;
+        margin-bottom: 5px;
+        text-transform: capitalize;
+        margin-top: 25px;
+        border-top: 1px solid #e7e7e7;
+        padding-top: 30px;
+      }
+      span {
+        color: $primary-color;
+        font-weight: 600;
+      }
+    }
+    .carousel-indicators {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-top: 35px;
+      margin-right: 15%;
+      margin-left: 15%;
+      li {
+        text-indent: 0;
+        width: 45px;
+        min-width: 45px;
+        height: 45px;
+        min-height: 45px;
+        margin: 0px 5px;
+        border: 5px solid $white-color;
+        box-shadow: 0 0 10px #cccccc;
+        border-radius: 50%;
+        position: relative;
+        align-items: center;
+        @include transition(all 0.35s ease-in-out);
+        img {
+          position: absolute;
+          border-radius: 50%;
+          height: 45px;
+          min-height: 45px;
+          min-width: 45px;
+          width: 45px;
+          left: 0px;
+          top: 0px;
+          @include transition(all 0.35s ease-in-out);
+        }
+      }
+      li.active {
+        @include transition(all 0.35s ease-in-out);
+        border: 5px solid $primary-color;
+        width: 65px;
+        height: 65px;
+        margin-top: -10px;
+        img {
+          width: 65px;
+          height: 65px;
+          @include transition(all 0.35s ease-in-out);
+        }
+      }
+    }
+  }
+}
+
+#news {
+  @extend %section-padding;
+  background-color: $section-background-color;
+  position: relative;
+  &::after {
+    @include section-left-after($white-color);
+  }
+  .news-header {
+    margin-bottom: 60px;
+    h2 {
+      font-weight: 700;
+      font-size: 36px;
+    }
+    a {
+      @include btn-plus-icon($white-color);
+    }
+  }
+  .news-content {
+    .card {
+      box-shadow: 0 0 10px #cccccc;
+      border-radius: 10px;
+      overflow: hidden;
+      .card-body {
+        padding: 55px 30px 30px;
+        position: relative;
+        .date{
+          position: absolute;
+          left: 30px;
+          top: -60px;
+          color: $black-color;
+          font-weight: 600;
+          display: inline-block;
+          padding: 15px 30px;
+          background-color: $white-color;
+          box-shadow: 0 0 10px #cccccc;
+          border-radius: 5px;
+         strong{
+           display: block;
+         }
+        }
+        a {
+          margin-top: 7px;
+          @include btn-transform($primary-color, $white-color);
+        }
+        h4 {
+          font-weight: 700;
+          margin-bottom: 20px;
+        }
+        h6{
+          font-size: 13px;
+          color: $gray-color;
+          margin-bottom: 20px;
+          i{
+            color: $primary-color;
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
 }
