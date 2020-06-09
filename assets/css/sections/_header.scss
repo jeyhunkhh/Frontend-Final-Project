@@ -3,6 +3,7 @@
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
   z-index: 100;
   position: relative;
+  
   button {
     color: black;
   }
@@ -254,6 +255,15 @@
   }
   a.active::after {
     color: $primary-color !important;
+  }
+  &.fixed{
+    left: 0;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+    animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
   }
 }
 
