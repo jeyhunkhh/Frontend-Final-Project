@@ -1,0 +1,140 @@
+#footer {
+  @extend %section-padding;
+  padding-bottom: 0;
+  position: relative;
+
+  .footer-about {
+    img {
+      margin-bottom: 30px;
+    }
+  }
+  h4 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      content: "";
+      height: 10px;
+      width: 100%;
+      background: #f4f7fc;
+      z-index: -1;
+    }
+  }
+  li {
+    margin-bottom: 18px;
+  }
+
+  .footer {
+    padding-bottom: 120px;
+  }
+
+  .footer-contact {
+    strong {
+      font-weight: 900;
+    }
+    .email {
+      margin-bottom: 10px;
+    }
+    .phone {
+      margin: 0;
+    }
+    .social {
+      margin-top: 25px;
+      a {
+        display: inline-block;
+        height: 37px;
+        width: 37px;
+        line-height: 40px;
+        text-align: center;
+        color: #ffffff;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      .facebook {
+        background-color: #3b5998;
+      }
+      .twitter {
+        background-color: #1da1f2;
+      }
+      .youtube {
+        background-color: #cd201f;
+      }
+      .instagram {
+        background: #f09433;
+        background: -moz-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+        background: linear-gradient(
+          45deg,
+          #f09433 0%,
+          #e6683c 25%,
+          #dc2743 50%,
+          #cc2366 75%,
+          #bc1888 100%
+        );
+      }
+    }
+  }
+
+  .copyright {
+    padding-bottom: 32px;
+    p {
+      a {
+        font-weight: 700;
+        color: $primary-color;
+        text-decoration: underline;
+      }
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      li {
+        display: inline-block;
+        margin-left: 15px;
+        a {
+          font-weight: 700;
+          color: $black-color;
+          @include transition(all 0.35s ease-in-out);
+          &:hover {
+            color: $primary-color;
+            text-decoration: none;
+            @include transition(all 0.35s ease-in-out);
+          }
+        }
+      }
+    }
+  }
+
+  .backgound-image {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+     max-width: 100%;
+     opacity: 0.05;
+    }
+  }
+}

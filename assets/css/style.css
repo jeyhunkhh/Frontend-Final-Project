@@ -50,6 +50,11 @@ ul {
   animation: rotating 10s linear infinite;
 }
 
+#footer, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license
@@ -3088,9 +3093,139 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   color: #437eeb !important;
 }
 
-#first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news {
-  padding-top: 120px;
+#footer {
+  padding-bottom: 0;
+  position: relative;
+}
+
+#footer .footer-about img {
+  margin-bottom: 30px;
+}
+
+#footer h4 {
+  font-weight: 700;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+#footer h4::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  height: 10px;
+  width: 100%;
+  background: #f4f7fc;
+  z-index: -1;
+}
+
+#footer li {
+  margin-bottom: 18px;
+}
+
+#footer .footer {
   padding-bottom: 120px;
+}
+
+#footer .footer-contact strong {
+  font-weight: 900;
+}
+
+#footer .footer-contact .email {
+  margin-bottom: 10px;
+}
+
+#footer .footer-contact .phone {
+  margin: 0;
+}
+
+#footer .footer-contact .social {
+  margin-top: 25px;
+}
+
+#footer .footer-contact .social a {
+  display: inline-block;
+  height: 37px;
+  width: 37px;
+  line-height: 40px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+#footer .footer-contact .social .facebook {
+  background-color: #3b5998;
+}
+
+#footer .footer-contact .social .twitter {
+  background-color: #1da1f2;
+}
+
+#footer .footer-contact .social .youtube {
+  background-color: #cd201f;
+}
+
+#footer .footer-contact .social .instagram {
+  background: #f09433;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+#footer .copyright {
+  padding-bottom: 32px;
+}
+
+#footer .copyright p a {
+  font-weight: 700;
+  color: #437eeb;
+  text-decoration: underline;
+}
+
+#footer .copyright ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#footer .copyright ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+#footer .copyright ul li a {
+  font-weight: 700;
+  color: #232323;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+#footer .copyright ul li a:hover {
+  color: #437eeb;
+  text-decoration: none;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+#footer .backgound-image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+#footer .backgound-image img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  opacity: 0.05;
 }
 
 #applying-data-science {
