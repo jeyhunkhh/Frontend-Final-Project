@@ -1,0 +1,303 @@
+// Navbar //
+@media (max-width: 1099.98px) {
+  #navbar {
+    .navbar {
+      .nav-item {
+        padding: 30px 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  #navbar {
+    .container {
+      height: 71px;
+      border-bottom: 1px solid $gray-border-color;
+    }
+    .navbar {
+      height: 71px;
+      .logo-and-btn {
+        .navbar-brand {
+          display: block;
+          position: absolute !important;
+          left: 50% !important;
+          top: 0 !important;
+          transform: translateX(-50%) !important;
+          margin: 0;
+          padding: 10px;
+          .logo-nav {
+            display: none;
+          }
+          .logo-responsive {
+            display: inline-block;
+          }
+          &::after {
+            display: none;
+          }
+        }
+        .navbar-toggler {
+          outline: none;
+          .navbar-toggler-icon {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin: 0;
+          }
+        }
+      }
+      .navbar-collapse {
+        float: none !important;
+        padding: 0px 40px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 71px;
+        background-color: $white-color;
+        .nav-item {
+          padding: 0;
+          position: relative;
+          a {
+            font-size: 14px;
+            padding: 13px 0px;
+            border-bottom: solid 1px #e0e0e0;
+            &::after {
+              content: "\f105" !important;
+              right: 0 !important;
+              top: 25% !important;
+            }
+            &:hover {
+              color: $navbar-black-color;
+            }
+          }
+          .hover-menu {
+            visibility: visible;
+            opacity: 1;
+            display: none;
+            box-shadow: none;
+            left: 0;
+            top: 0;
+            position: relative;
+            width: 100%;
+            color: $navbar-black-color;
+            a {
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+        .dropdown {
+          &:hover > ul {
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #navbar {
+    .navbar {
+      padding: 0px 10px;
+    }
+    .side-menu {
+      max-width: 90%;
+    }
+  }
+
+  #applying-data-science{
+    .content{
+      margin-bottom: 20px !important;
+      h1{
+        font-size: 36px !important; 
+        span{
+          font-size: 30px !important;
+        }
+      }
+    }
+  }
+  
+  #work-process{
+    .work-process-content{
+      .text{
+        &::after{
+          left: 49% !important;
+        }
+      }
+    }
+  }
+}
+
+// ----- //
+
+// Home page responsive //
+@media (max-width: 1099.98px) {
+  #skill,
+  #services,
+  #news {
+    &::after {
+      display: none;
+    }
+  }
+
+  #applying-data-science {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #applying-data-science {
+    .image {
+      img {
+        max-width: 100% !important;
+        margin-left: 0 !important;
+      }
+    }
+    .content {
+      text-align: center;
+    }
+  }
+
+  #skill {
+    &::after {
+      display: none;
+    }
+    .image-box {
+      &::after {
+        display: none;
+      }
+      .second-img {
+        right: 0 !important;
+      }
+    }
+  }
+
+  #work-process {
+    .work-process-content {
+      .right-arrow {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  #fun-factor-area {
+    .margin-top {
+      margin-top: 80px;
+    }
+  }
+  #services {
+    .services-header {
+      h2 {
+        margin: 0 !important;
+        margin-bottom: 25px !important;
+      }
+    }
+    .services-content {
+      .item {
+        margin-bottom: 30px !important;
+      }
+    }
+  }
+
+  #work-process {
+    .work-process-content {
+      .text {
+        &::before {
+          left: 51% !important;
+        }
+      }
+    }
+  }
+
+  #news {
+    .news-content {
+      .card {
+        margin-bottom: 30px !important;
+      }
+    }
+  }
+
+  #footer{
+    .copyright{
+    text-align: center;
+    padding: 0;
+    }
+    .link{
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  #applying-data-science,
+  #services,
+  #work-process,
+  #testimonials,
+  #news {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+  #applying-data-science {
+    .content {
+      margin-top: 20px !important;
+    }
+  }
+  #fun-factor-area {
+    .margin-top {
+      margin-top: 0 !important;
+    }
+    .fun-factor-content {
+      margin-top: 20px !important;
+    }
+  }
+  #about {
+    .tabs {
+      .tabs-header {
+        justify-content: start !important;
+        ul {
+          flex-direction: column;
+          width: 100%;
+          li {
+            margin: 10px;
+            text-align: center;
+            a {
+              border: 1px solid #dddddd;
+              display: block;
+            }
+            a.active {
+              &::after {
+                display: none;
+              }
+              &::before {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .tab-content {
+        padding: 50px 30px !important;
+        .tab-image {
+          img {
+            margin-top: 30px;
+          }
+        }
+        .col-lg-7 {
+          padding-right: 15px !important;
+        }
+      }
+    }
+  }
+  #services {
+    .image-animation {
+      display: none !important;
+    }
+  }
+}
+// ----- //
