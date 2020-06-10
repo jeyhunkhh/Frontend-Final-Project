@@ -3,13 +3,10 @@
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.04);
   z-index: 100;
   position: relative;
-  
-  button {
-    color: black;
-  }
+
   .navbar {
-    position: relative;
     padding: 0em;
+    position: relative;
     .search-nav {
       ul {
         display: flex;
@@ -59,21 +56,26 @@
       }
     }
     .navbar-brand {
-      img {
+      position: relative;
+      .logo-nav{
         position: relative;
         z-index: 1;
         left: -15px;
       }
+      .logo-responsive{
+        display: none;
+      }
       &::after {
         content: "";
         position: absolute;
-        left: 0;
-        top: 0;
-        height: 92px;
-        width: 12em;
+        right: 0;
+        top: -15px;
+        height: 93px;
+        width: 500%;
         background-color: $primary-color;
       }
     }
+
     .nav-item {
       padding: 30px 25px;
       a {
@@ -256,7 +258,7 @@
   a.active::after {
     color: $primary-color !important;
   }
-  &.fixed{
+  &.fixed {
     left: 0;
     margin: auto;
     position: fixed;
@@ -266,4 +268,3 @@
     animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
   }
 }
-

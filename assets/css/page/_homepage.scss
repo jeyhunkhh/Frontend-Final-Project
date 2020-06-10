@@ -4,7 +4,8 @@
     rgba(244, 247, 252, 1) 36%,
     rgba(255, 255, 255, 1) 100%
   );
-
+  overflow: hidden;
+  
   .content {
     margin-top: 80px;
     margin-bottom: 80px;
@@ -27,7 +28,7 @@
   }
   .image {
     img {
-      max-width: 115%;
+      max-width: 120%;
       height: auto;
       margin-left: 30px;
       overflow: hidden;
@@ -38,7 +39,7 @@
 #first-slider {
   @extend %section-padding;
   position: relative;
-
+  overflow: hidden;
   .slider {
     .owl-dots {
       span {
@@ -74,7 +75,6 @@
   }
   .item {
     margin-bottom: 25px;
-    .content {
       margin: 10px;
       padding: 50px;
       box-shadow: 0 0 10px #cccccc;
@@ -129,7 +129,7 @@
       a {
         @include btn-transform($primary-color, $white-color);
       }
-    }
+    
   }
 
   .background-image {
@@ -149,6 +149,7 @@
 }
 
 #about {
+  overflow: hidden;
   background-color: $section-background-color;
   h4 {
     font-weight: 800;
@@ -254,6 +255,7 @@
   @extend %section-padding;
   background-image: url("http://thememine.net/themeforest/anada/assets/img/map.svg");
   background-color: $section-background-color;
+  overflow: hidden;
   .fun-factor-content {
     text-align: center;
     .timer {
@@ -282,6 +284,7 @@
   @extend %section-padding;
   padding-bottom: 90px;
   position: relative;
+  overflow: hidden;
   &::after {
     @include section-left-after($section-background-color);
   }
@@ -305,6 +308,7 @@
   }
   .services-content {
     .item {
+      margin-bottom: 10px;
       box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
       padding: 50px 30px;
       background: #ffffff;
@@ -381,6 +385,7 @@
 #work-process {
   @extend %section-padding;
   background-color: $section-background-color;
+  overflow: hidden;
   .work-process-header {
     margin-bottom: 60px;
     h4 {
@@ -497,8 +502,10 @@
 }
 
 #skill {
+  
   @extend %section-padding;
   position: relative;
+  overflow: hidden;
   &::after {
     @include section-left-after($section-background-color);
   }
@@ -580,6 +587,7 @@
 #testimonials {
   @extend %section-padding;
   padding-top: 0;
+  overflow: hidden;
   .testimonials-header {
     margin-bottom: 60px;
     h4 {
@@ -701,6 +709,7 @@
   @extend %section-padding;
   background-color: $section-background-color;
   position: relative;
+  overflow: hidden;
   &::after {
     @include section-left-after($white-color);
   }

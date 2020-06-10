@@ -1,6 +1,8 @@
 $(document).ready(function () {
   $(".img-loader").fadeOut("hide");
 
+  // Navbar //
+
   // Search //
   if ($(".search-icon").length) {
     $(".search-icon").click(function (e) {
@@ -15,15 +17,40 @@ $(document).ready(function () {
     $(".side-menu-icon").click(function (e) {
       e.preventDefault();
       $(".side-menu").addClass("open");
+      $("body").css("overflow","hidden");
     });
   }
 
   if ($(".close-side").length) {
     $(".close-side").click(function (e) {
       e.preventDefault();
+      $("body").css("overflow","scroll");
       $(".side-menu").removeClass("open");
     });
   }
+  // ----- //
+
+  // Navbar responsive //
+  $(".navbar-toggler").click(function () {
+    if ($(".navbar-toggler-icon").hasClass("fa-bars")) {
+      $("body").css("overflow","hidden");
+      $(".navbar-toggler-icon").removeClass("fa-bars").addClass("fa-times");
+    } else {
+      $(".navbar-toggler-icon").removeClass("fa-times").addClass("fa-bars");
+      $("body").css("overflow","scroll");
+      $(".dropdown").find(".hover-menu").slideUp();
+    }
+  });
+
+  if ($(window).width() <= 991.98) {
+    $(".dropdown").click(function (e) {
+      e.preventDefault();
+      $(this).siblings().find(".hover-menu").slideUp();
+      $(this).find(".hover-menu").slideToggle("slow");
+    });
+  }
+
+  // -----//
   // ----- //
 
   // Owl carousel 2//
@@ -66,13 +93,19 @@ $(document).ready(function () {
     });
   }
   // ----- //
-  
-  $('.fun-factor-content').appear(function() {
-      $('.timer').countTo();
-  }, {
-      accY: -100
-  });
-  
+
+  // countTo.js and appear.js
+  $(".fun-factor-content").appear(
+    function () {
+      $(".timer").countTo();
+    },
+    {
+      accY: -100,
+    }
+  );
+
+  // ----- //
+
   // wow.js //
   function wowAnimation() {
     wow = new WOW({

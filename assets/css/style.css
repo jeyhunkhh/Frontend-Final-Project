@@ -2778,13 +2778,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   position: relative;
 }
 
-#navbar button {
-  color: black;
-}
-
 #navbar .navbar {
-  position: relative;
   padding: 0em;
+  position: relative;
 }
 
 #navbar .navbar .search-nav ul {
@@ -2846,19 +2842,27 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   color: #333333;
 }
 
-#navbar .navbar .navbar-brand img {
+#navbar .navbar .navbar-brand {
+  position: relative;
+}
+
+#navbar .navbar .navbar-brand .logo-nav {
   position: relative;
   z-index: 1;
   left: -15px;
 }
 
+#navbar .navbar .navbar-brand .logo-responsive {
+  display: none;
+}
+
 #navbar .navbar .navbar-brand::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
-  height: 92px;
-  width: 12em;
+  right: 0;
+  top: -15px;
+  height: 93px;
+  width: 500%;
   background-color: #437eeb;
 }
 
@@ -3192,29 +3196,31 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   text-decoration: underline;
 }
 
-#footer .copyright ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#footer .link {
+  text-align: end;
+}
+
+#footer .link ul {
+  display: block;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-#footer .copyright ul li {
+#footer .link ul li {
   display: inline-block;
   margin-left: 15px;
 }
 
-#footer .copyright ul li a {
+#footer .link ul li a {
   font-weight: 700;
   color: #232323;
   -webkit-transition: all 0.35s ease-in-out;
   transition: all 0.35s ease-in-out;
 }
 
-#footer .copyright ul li a:hover {
+#footer .link ul li a:hover {
   color: #437eeb;
   text-decoration: none;
   -webkit-transition: all 0.35s ease-in-out;
@@ -3249,9 +3255,240 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   text-align: center;
 }
 
+@media (max-width: 1099.98px) {
+  #navbar .navbar .nav-item {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #navbar .container {
+    height: 71px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  #navbar .navbar {
+    height: 71px;
+  }
+  #navbar .navbar .logo-and-btn .navbar-brand {
+    display: block;
+    position: absolute !important;
+    left: 50% !important;
+    top: 0 !important;
+    -webkit-transform: translateX(-50%) !important;
+            transform: translateX(-50%) !important;
+    margin: 0;
+    padding: 10px;
+  }
+  #navbar .navbar .logo-and-btn .navbar-brand .logo-nav {
+    display: none;
+  }
+  #navbar .navbar .logo-and-btn .navbar-brand .logo-responsive {
+    display: inline-block;
+  }
+  #navbar .navbar .logo-and-btn .navbar-brand::after {
+    display: none;
+  }
+  #navbar .navbar .logo-and-btn .navbar-toggler {
+    outline: none;
+  }
+  #navbar .navbar .logo-and-btn .navbar-toggler .navbar-toggler-icon {
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+  }
+  #navbar .navbar .navbar-collapse {
+    float: none !important;
+    padding: 0px 40px;
+    margin: 0px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 71px;
+    background-color: #ffffff;
+  }
+  #navbar .navbar .navbar-collapse .nav-item {
+    padding: 0;
+    position: relative;
+  }
+  #navbar .navbar .navbar-collapse .nav-item a {
+    font-size: 14px;
+    padding: 13px 0px;
+    border-bottom: solid 1px #e0e0e0;
+  }
+  #navbar .navbar .navbar-collapse .nav-item a::after {
+    content: "\f105" !important;
+    right: 0 !important;
+    top: 25% !important;
+  }
+  #navbar .navbar .navbar-collapse .nav-item a:hover {
+    color: #333333;
+  }
+  #navbar .navbar .navbar-collapse .nav-item .hover-menu {
+    visibility: visible;
+    opacity: 1;
+    display: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    left: 0;
+    top: 0;
+    position: relative;
+    width: 100%;
+    color: #333333;
+  }
+  #navbar .navbar .navbar-collapse .nav-item .hover-menu a::after {
+    display: none;
+  }
+  #navbar .navbar .navbar-collapse .dropdown:hover > ul {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@media (max-width: 575.98px) {
+  #navbar .navbar {
+    padding: 0px 10px;
+  }
+  #navbar .side-menu {
+    max-width: 90%;
+  }
+  #applying-data-science .content {
+    margin-bottom: 20px !important;
+  }
+  #applying-data-science .content h1 {
+    font-size: 36px !important;
+  }
+  #applying-data-science .content h1 span {
+    font-size: 30px !important;
+  }
+  #work-process .work-process-content .text::after {
+    left: 49% !important;
+  }
+}
+
+@media (max-width: 1099.98px) {
+  #skill::after,
+  #services::after,
+  #news::after {
+    display: none;
+  }
+  #applying-data-science {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #applying-data-science .image img {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
+  #applying-data-science .content {
+    text-align: center;
+  }
+  #skill::after {
+    display: none;
+  }
+  #skill .image-box::after {
+    display: none;
+  }
+  #skill .image-box .second-img {
+    right: 0 !important;
+  }
+  #work-process .work-process-content .right-arrow::after {
+    display: none;
+  }
+  #fun-factor-area .margin-top {
+    margin-top: 80px;
+  }
+  #services .services-header h2 {
+    margin: 0 !important;
+    margin-bottom: 25px !important;
+  }
+  #services .services-content .item {
+    margin-bottom: 30px !important;
+  }
+  #work-process .work-process-content .text::before {
+    left: 51% !important;
+  }
+  #news .news-content .card {
+    margin-bottom: 30px !important;
+  }
+  #footer .copyright {
+    text-align: center;
+    padding: 0;
+  }
+  #footer .link {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #applying-data-science,
+  #services,
+  #work-process,
+  #testimonials,
+  #news {
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+  #applying-data-science .content {
+    margin-top: 20px !important;
+  }
+  #fun-factor-area .margin-top {
+    margin-top: 0 !important;
+  }
+  #fun-factor-area .fun-factor-content {
+    margin-top: 20px !important;
+  }
+  #about .tabs .tabs-header {
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: start !important;
+  }
+  #about .tabs .tabs-header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  #about .tabs .tabs-header ul li {
+    margin: 10px;
+    text-align: center;
+  }
+  #about .tabs .tabs-header ul li a {
+    border: 1px solid #dddddd;
+    display: block;
+  }
+  #about .tabs .tabs-header ul li a.active::after {
+    display: none;
+  }
+  #about .tabs .tabs-header ul li a.active::before {
+    display: none;
+  }
+  #about .tabs .tab-content {
+    padding: 50px 30px !important;
+  }
+  #about .tabs .tab-content .tab-image img {
+    margin-top: 30px;
+  }
+  #about .tabs .tab-content .col-lg-7 {
+    padding-right: 15px !important;
+  }
+  #services .image-animation {
+    display: none !important;
+  }
+}
+
 #applying-data-science {
   background: -webkit-gradient(linear, left top, right top, color-stop(36%, #f4f7fc), to(white));
   background: linear-gradient(90deg, #f4f7fc 36%, white 100%);
+  overflow: hidden;
 }
 
 #applying-data-science .content {
@@ -3302,7 +3539,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 #applying-data-science .image img {
-  max-width: 115%;
+  max-width: 120%;
   height: auto;
   margin-left: 30px;
   overflow: hidden;
@@ -3310,6 +3547,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #first-slider {
   position: relative;
+  overflow: hidden;
 }
 
 #first-slider .slider .owl-dots span {
@@ -3342,9 +3580,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #first-slider .item {
   margin-bottom: 25px;
-}
-
-#first-slider .item .content {
   margin: 10px;
   padding: 50px;
   -webkit-box-shadow: 0 0 10px #cccccc;
@@ -3353,7 +3588,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   border-bottom: 3px solid #437eeb;
 }
 
-#first-slider .item .content .icon {
+#first-slider .item .icon {
   font-size: 60px;
   margin-bottom: 30px;
   position: relative;
@@ -3365,7 +3600,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   -webkit-text-fill-color: transparent;
 }
 
-#first-slider .item .content .icon::after {
+#first-slider .item .icon::after {
   position: absolute;
   left: -10px;
   top: 0;
@@ -3379,12 +3614,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
           transform: rotate(225deg);
 }
 
-#first-slider .item .content h3 {
+#first-slider .item h3 {
   margin-bottom: 25px;
   font-weight: 700;
 }
 
-#first-slider .item .content a {
+#first-slider .item a {
   color: #437eeb;
   padding: 13px 40px;
   border: 1px solid #e7e7e7;
@@ -3395,7 +3630,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   z-index: 1;
 }
 
-#first-slider .item .content a::after {
+#first-slider .item a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -3409,11 +3644,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   transition: all 0.25s ease-in-out;
 }
 
-#first-slider .item .content a:hover {
+#first-slider .item a:hover {
   color: #ffffff;
 }
 
-#first-slider .item .content a:hover::after {
+#first-slider .item a:hover::after {
   left: 0;
 }
 
@@ -3434,6 +3669,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 #about {
+  overflow: hidden;
   background-color: #f4f7fc;
 }
 
@@ -3582,6 +3818,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #fun-factor-area {
   background-image: url("http://thememine.net/themeforest/anada/assets/img/map.svg");
   background-color: #f4f7fc;
+  overflow: hidden;
 }
 
 #fun-factor-area .fun-factor-content {
@@ -3608,6 +3845,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #services {
   padding-bottom: 90px;
   position: relative;
+  overflow: hidden;
 }
 
 #services::after {
@@ -3668,6 +3906,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 #services .services-content .item {
+  margin-bottom: 10px;
   -webkit-box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
           box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
   padding: 50px 30px;
@@ -3755,6 +3994,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #work-process {
   background-color: #f4f7fc;
+  overflow: hidden;
 }
 
 #work-process .work-process-header {
@@ -3880,6 +4120,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #skill {
   position: relative;
+  overflow: hidden;
 }
 
 #skill::after {
@@ -3977,6 +4218,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 #testimonials {
   padding-top: 0;
+  overflow: hidden;
 }
 
 #testimonials .testimonials-header {
@@ -4116,6 +4358,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #news {
   background-color: #f4f7fc;
   position: relative;
+  overflow: hidden;
 }
 
 #news::after {

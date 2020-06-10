@@ -102,8 +102,11 @@
         text-decoration: underline;
       }
     }
+  }
+  .link {
+    text-align: end;
     ul {
-      display: flex;
+      display: block;
       flex-direction: row;
       li {
         display: inline-block;
@@ -133,8 +136,8 @@
       position: absolute;
       bottom: 0;
       left: 0;
-     max-width: 100%;
-     opacity: 0.05;
+      max-width: 100%;
+      opacity: 0.05;
     }
   }
 }
