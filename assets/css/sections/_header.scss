@@ -57,12 +57,12 @@
     }
     .navbar-brand {
       position: relative;
-      .logo-nav{
+      .logo-nav {
         position: relative;
         z-index: 1;
         left: -15px;
       }
-      .logo-responsive{
+      .logo-responsive {
         display: none;
       }
       &::after {
@@ -75,7 +75,6 @@
         background-color: $primary-color;
       }
     }
-
     .nav-item {
       padding: 30px 25px;
       a {
@@ -154,6 +153,7 @@
       }
     }
   }
+
   .side-menu {
     @include transition(all 0.3s ease-in-out);
     padding: 50px;
@@ -266,5 +266,61 @@
     width: 100%;
     -webkit-animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
     animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .navbar-second {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    .navbar {
+      .navbar-brand {
+        &::after {
+          display: none;
+        }
+      }
+      .collapse {
+        .navbar-nav {
+          .nav-item {
+            &:hover > .nav-link {
+              &::after {
+                color: $white-color !important;
+              }
+            }
+            .nav-link {
+              color: $white-color !important;
+              &.hover {
+                color: $white-color;
+              }
+              &::after {
+                color: $white-color !important;
+              }
+            }
+          }
+        }
+      }
+      .search-nav {
+        .search-nav-icon {
+          color: $white-color !important;
+        }
+      }
+    }
+  }
+
+  .navbar-second-move {
+    .navbar {
+      .navbar-brand {
+        &::after {
+          display: none !important;
+        }
+        .logo-nav {
+          display: none !important;
+        }
+        .logo-responsive {
+          display: block !important;
+        }
+      }
+    }
   }
 }

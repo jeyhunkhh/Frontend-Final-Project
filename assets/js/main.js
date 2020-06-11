@@ -1,11 +1,64 @@
 $(document).ready(function () {
-  $(".img-loader").fadeOut("hide");
+  $(window).on("load", function () {
+    $(".img-loader").fadeOut("hide");
+  });
 
-  // Navbar //
+  // Navbar Second//
+  if ($("#navbar").hasClass("navbar-second")) {
+    $("#navbar").css({
+      "box-shadow": "none",
+      "border-bottom": "1px solid rgba(255, 255, 255, 0.1)",
+      "background-color": "transparent",
+    });
+  };    
 
-  // Search //
-  if ($(".search-icon").length) {
-    $(".search-icon").click(function (e) {
+  if(window.scrollY > 0){
+    if ($("#navbar").hasClass("navbar-second")) {
+      $("#navbar")
+        .removeClass("navbar-second")
+        .addClass("navbar-second-move")
+        .css({
+          "box-shadow": "0 8px 25px 0 rgba(0, 0, 0, 0.04)",
+          "border-bottom": "none",
+          "background-color": "#ffffff",
+        });
+    }
+  }
+  // ----- //
+
+  // Navbar move //
+  $(window).scroll(function (e) {
+    if ($(window).scrollTop() > 0) {
+      $("#navbar").addClass("fixed fadeInDown");
+      if ($("#navbar").hasClass("navbar-second")) {
+        $("#navbar")
+          .removeClass("navbar-second")
+          .addClass("navbar-second-move")
+          .css({
+            "box-shadow": "0 8px 25px 0 rgba(0, 0, 0, 0.04)",
+            "border-bottom": "none",
+            "background-color": "#ffffff",
+          });
+      }
+    } else {
+      $("#navbar").removeClass("fixed fadeInDown");
+      if ($("#navbar").hasClass("navbar-second-move")) {
+        $("#navbar")
+          .removeClass("navbar-second-move")
+          .addClass("navbar-second")
+          .css({
+            "box-shadow": "none",
+            "border-bottom": "1px solid rgba(255, 255, 255, 0.1)",
+            "background-color": "transparent",
+          });
+      }
+    }
+  });
+  // ----- //
+
+  // Navbar Search //
+  if ($(".search-click").length) {
+    $(".search-click").click(function (e) {
       e.preventDefault();
       $("form").slideToggle("show");
     });
@@ -17,14 +70,14 @@ $(document).ready(function () {
     $(".side-menu-icon").click(function (e) {
       e.preventDefault();
       $(".side-menu").addClass("open");
-      $("body").css("overflow","hidden");
+      $("body").css("overflow", "hidden");
     });
   }
 
   if ($(".close-side").length) {
     $(".close-side").click(function (e) {
       e.preventDefault();
-      $("body").css("overflow","scroll");
+      $("body").css("overflow", "scroll");
       $(".side-menu").removeClass("open");
     });
   }
@@ -33,11 +86,11 @@ $(document).ready(function () {
   // Navbar responsive //
   $(".navbar-toggler").click(function () {
     if ($(".navbar-toggler-icon").hasClass("fa-bars")) {
-      $("body").css("overflow","hidden");
+      $("body").css("overflow", "hidden");
       $(".navbar-toggler-icon").removeClass("fa-bars").addClass("fa-times");
     } else {
       $(".navbar-toggler-icon").removeClass("fa-times").addClass("fa-bars");
-      $("body").css("overflow","scroll");
+      $("body").css("overflow", "scroll");
       $(".dropdown").find(".hover-menu").slideUp();
     }
   });
@@ -49,9 +102,7 @@ $(document).ready(function () {
       $(this).find(".hover-menu").slideToggle("slow");
     });
   }
-
   // -----//
-  // ----- //
 
   // Owl carousel 2//
   if ($(".slider .owl-carousel").length) {
@@ -94,15 +145,20 @@ $(document).ready(function () {
   }
   // ----- //
 
-  // countTo.js and appear.js
-  $(".fun-factor-content").appear(
-    function () {
-      $(".timer").countTo();
-    },
-    {
-      accY: -100,
-    }
-  );
+  // countTo.js and move-start
+  if ($("#fun-factor-area").length) {
+
+    $(window).scroll(function (e){
+      if($(window).scrollTop() >= 1900 ){
+        if($("#fun-factor-area").hasClass("start")){
+          $(".timer").countTo();
+          $("#fun-factor-area").removeClass("start")
+       };
+      };
+    });
+
+   
+  }
 
   // ----- //
 
@@ -121,14 +177,6 @@ $(document).ready(function () {
 
   $(window).on("load", function () {
     wowAnimation();
-  });
-
-  $(window).scroll(function (e) {
-    if ($(window).scrollTop() > 100) {
-      $("#navbar").addClass("fixed fadeInDown");
-    } else {
-      $("#navbar").removeClass("fixed fadeInDown");
-    }
   });
 });
 

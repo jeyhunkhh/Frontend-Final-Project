@@ -2,7 +2,6 @@
   @extend %section-padding;
   padding-bottom: 0;
   position: relative;
-
   .footer-about {
     img {
       margin-bottom: 30px;
@@ -53,6 +52,7 @@
         color: #ffffff;
         border-radius: 5px;
         font-size: 14px;
+        margin-right: 10px;
       }
       .facebook {
         background-color: #3b5998;
@@ -126,18 +126,37 @@
   }
 
   .backgound-image {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
     img {
       position: absolute;
-      bottom: 0;
       left: 0;
+      bottom: 0;
+      width: 100%;
       max-width: 100%;
       opacity: 0.05;
+      z-index: -1;
+    }
+  }
+}
+
+.second-footer{
+  background-color: #111d30 ;
+  color: $white-color !important;
+  z-index: 1;
+  h4,a{
+    color: $white-color !important;
+    &::after{
+      display: none;
+    }
+  }
+  .backgound-image {
+    img {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      max-width: 100%;
+      opacity: 0.05;
+      z-index: -1;
     }
   }
 }
