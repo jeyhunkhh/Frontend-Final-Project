@@ -502,13 +502,10 @@
 }
 
 #skill {
-  
   @extend %section-padding;
   position: relative;
   overflow: hidden;
-  &::after {
-    @include section-left-after($section-background-color);
-  }
+ 
   .skill-content {
     overflow: hidden;
     h2 {
@@ -581,6 +578,11 @@
       height: 60%;
       width: auto;
     }
+  }
+}
+.skill-left-after{
+  &::after {
+    @include section-left-after($section-background-color);
   }
 }
 

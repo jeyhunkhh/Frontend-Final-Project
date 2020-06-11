@@ -108,22 +108,22 @@
     }
   }
 
-  #applying-data-science{
-    .content{
+  #applying-data-science {
+    .content {
       margin-bottom: 20px !important;
-      h1{
-        font-size: 36px !important; 
-        span{
+      h1 {
+        font-size: 36px !important;
+        span {
           font-size: 30px !important;
         }
       }
     }
   }
-  
-  #work-process{
-    .work-process-content{
-      .text{
-        &::after{
+
+  #work-process {
+    .work-process-content {
+      .text {
+        &::after {
           left: 49% !important;
         }
       }
@@ -222,16 +222,6 @@
       }
     }
   }
-
-  #footer{
-    .copyright{
-    text-align: center;
-    padding: 0;
-    }
-    .link{
-      text-align: center;
-    }
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -301,3 +291,52 @@
   }
 }
 // ----- //
+
+// About Us Page responsive //
+@media (max-width: 991.98px) {
+  #pages-first-section {
+    padding-top: 110px !important;
+  }
+
+  #our-story {
+    .our-story-content {
+      &::after {
+        display: none;
+      }
+      .bottom {
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 1px dashed $gray-border-color;
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  #data-solutions{
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+  }
+  #our-story {
+    padding-top: 50px !important;
+  }
+}
+// ----- //
+
+// Fottor responsive// 
+@media (max-width: 991.98px){
+  #footer {
+    .copyright {
+      text-align: center;
+      padding: 0;
+    }
+    .link {
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 767.98px){
+  #footer{
+    padding-top: 50px !important;
+  }
+}
+// ----- // 
