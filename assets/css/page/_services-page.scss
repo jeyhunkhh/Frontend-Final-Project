@@ -1,0 +1,191 @@
+#services-slider {
+  @extend %section-padding;
+  position: relative;
+  overflow: hidden;
+  .item {
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #cccccc;
+    padding: 50px 30px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    z-index: 1;
+    margin: 10px;
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: -100%;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(to bottom, #437eeb 0%, #093ac1 100%);
+      z-index: -1;
+      @include transition(all 0.25s ease-in-out);
+    }
+    &:hover {
+      color: $white-color;
+      @include transition(all 0.25s ease-in-out);
+      h4 {
+        color: $white-color;
+      }
+      a {
+        color: $white-color;
+        border-color: rgba(170, 170, 170, 0.5);
+      }
+    }
+    &:hover::after {
+      bottom: 0;
+    }
+    img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 30px;
+      min-height: 100px;
+    }
+    h4 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      color: $primary-color;
+      position: relative;
+      margin-top: 15px;
+      border: 1px solid $gray-border-color;
+      padding: 10px 30px;
+      font-weight: 800;
+      i {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: $primary-color;
+        font-size: 15px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 0 10px #cccccc;
+        z-index: 1;
+        margin-right: 5px;
+        background: #ffffff;
+      }
+    }
+  }
+  .owl-dots {
+    .owl-dot {
+      outline: none;
+      span {
+        display: block;
+        height: 20px;
+        width: 20px;
+        margin: 0 5px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        background: #ffffff;
+        z-index: 1;
+        box-shadow: 0 0 10px #cccccc;
+      }
+    }
+  }
+  .active {
+    span {
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 40%;
+        top: 40%;
+        line-height: 5px;
+        height: 5px;
+        width: 5px;
+        background-color: $primary-color;
+        border-radius: 50%;
+      }
+    }
+  }
+  .image-animation {
+    position: absolute;
+    right: 50px;
+    top: 120px;
+    z-index: -1;
+  }
+}
+
+#your-project {
+  @extend %section-padding;
+  position: relative;
+  z-index: 1;
+  background-image: linear-gradient(
+    90deg,
+    rgba(2, 59, 166, 1) 0%,
+    rgba(67, 126, 235, 1) 100%
+  );
+  background-color: #437eeb;
+  overflow: hidden;
+  .content {
+    h2 {
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: $white-color;
+    }
+    p {
+      color: $white-color;
+    }
+    a {
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      color: $white-color;
+      position: relative;
+      margin-top: 15px;
+      border: 1px solid $gray-border-color;
+      padding: 10px 30px;
+      font-weight: 800;
+      @include transition(all 0.35s ease-in-out);
+      &:hover {
+        color: $primary-color;
+        background-color: $white-color;
+        @include transition(all 0.35s ease-in-out);
+      }
+      i {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+        text-align: center;
+        color: $primary-color;
+        font-size: 15px;
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 0 10px #cccccc;
+        z-index: 1;
+        margin-right: 5px;
+        background: #ffffff;
+      }
+    }
+  }
+
+  .image {
+    padding-left: 35px;
+    img {
+      max-width: 140%;
+    }
+  }
+
+  .your-project-bg-image {
+      img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6;
+    z-index: -1;
+      }
+  }
+}

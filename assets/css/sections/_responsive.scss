@@ -322,6 +322,28 @@
 }
 // ----- //
 
+// Services responsive //
+@media (max-width: 991.98px){
+  #your-project{
+    .image{
+      img{
+        max-width: 100% !important;
+      }
+    }
+  }
+}
+@media (max-width: 767.98px){
+  #services-slider{
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    .image-animation{
+      display: none !important;
+    }
+  }
+}
+// ----- //
+
+
 // Fottor responsive// 
 @media (max-width: 991.98px){
   #footer {
