@@ -1,0 +1,142 @@
+#services-single {
+  @extend %section-padding;
+  .services-single-content {
+    .artificial-intelligence {
+      h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      ul {
+        li {
+          margin-bottom: 15px;
+          i {
+            color: $primary-color;
+            margin-right: 10px;
+          }
+        }
+      }
+      a {
+        @include btn-plus-icon($white-color);
+        margin: 10px 10px;
+      }
+    }
+    .image-text {
+      img {
+        max-width: 100%;
+        margin: 30px 0px;
+      }
+      h2 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+    }
+    .item {
+      margin-top: 25px;
+      h4 {
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+    }
+    #accordion {
+      margin-top: 30px;
+      .card {
+        margin-bottom: 15px;
+        .card-header {
+          padding: 0;
+          background: $white-color;
+          box-shadow: none;
+          border-bottom: none;
+          h5 {
+            width: 100%;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+  .sidebar {
+    margin-top: 25px;
+    margin-bottom: 60px;
+    position: relative;
+    padding: 30px;
+    background: #fafafa;
+    padding-top: 0;
+    border: 1px solid $gray-border-color;
+    h4 {
+      background: linear-gradient(
+        90deg,
+        rgba(30, 85, 189, 1) 0%,
+        rgba(67, 126, 235, 1) 100%
+      );
+      color: #ffffff;
+      text-align: center;
+      padding: 16px;
+      font-weight: 800;
+      font-size: 20px;
+      position: relative;
+      top: -25px;
+    }
+    ul {
+      li {
+        margin-bottom: 15px;
+        &:last-child {
+          margin: 0;
+        }
+        a {
+          font-weight: 700;
+          color: $black-color;
+          text-decoration: none;
+          @include transition(all 0.35s ease-in-out);
+          &:hover {
+            color: $primary-color;
+            @include transition(all 0.35s ease-in-out);
+          }
+        }
+      }
+      .active {
+          position: relative;
+        &::after {
+          position: absolute;
+          left: 0;
+          top: 0;
+          content: "\f0a4";
+          font-family: "Font Awesome 5 Free";
+          color: #232323;
+        }
+        a {
+          margin-left: 25px;
+          color: $primary-color;
+        }
+      }
+    }
+    .btn{
+        @include btn-transform($primary-color,$white-color);
+    }
+  }
+
+  .contant{
+      ul{
+          li{
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              i{
+                color: $primary-color;
+                font-size: 30px;
+              }
+              .info{
+                padding-left: 15px;
+                  span{
+                      display: block;
+                      font-weight: 800;
+                  }
+              }
+          }
+      }
+  }
+}

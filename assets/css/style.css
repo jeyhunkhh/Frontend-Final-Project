@@ -50,7 +50,7 @@ ul {
   animation: rotating 10s linear infinite;
 }
 
-#footer, #pages-first-section, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news, #data-solutions, #services-slider, #your-project {
+#footer, #pages-first-section, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news, #data-solutions, #services-slider, #your-project, #services-single {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -5230,5 +5230,218 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   width: 100%;
   opacity: 0.6;
   z-index: -1;
+}
+
+#services-single .services-single-content .artificial-intelligence h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#services-single .services-single-content .artificial-intelligence ul li {
+  margin-bottom: 15px;
+}
+
+#services-single .services-single-content .artificial-intelligence ul li i {
+  color: #437eeb;
+  margin-right: 10px;
+}
+
+#services-single .services-single-content .artificial-intelligence a {
+  background-image: -webkit-gradient(linear, left top, right top, from(#1e55bd), to(#437eeb));
+  background-image: linear-gradient(90deg, #1e55bd 0%, #437eeb 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 25px;
+  letter-spacing: 1px;
+  padding: 15px 40px;
+  margin: 10px 10px;
+}
+
+#services-single .services-single-content .artificial-intelligence a i {
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 10px;
+  border-radius: 50%;
+  margin-left: 5px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#services-single .services-single-content .artificial-intelligence a:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(#437eeb), to(#1e55bd));
+  background-image: linear-gradient(90deg, #437eeb 0%, #1e55bd 100%);
+}
+
+#services-single .services-single-content .image-text img {
+  max-width: 100%;
+  margin: 30px 0px;
+}
+
+#services-single .services-single-content .image-text h2 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#services-single .services-single-content .item {
+  margin-top: 25px;
+}
+
+#services-single .services-single-content .item h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#services-single .services-single-content #accordion {
+  margin-top: 30px;
+}
+
+#services-single .services-single-content #accordion .card {
+  margin-bottom: 15px;
+}
+
+#services-single .services-single-content #accordion .card .card-header {
+  padding: 0;
+  background: #ffffff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-bottom: none;
+}
+
+#services-single .services-single-content #accordion .card .card-header h5 {
+  width: 100%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#services-single .sidebar {
+  margin-top: 25px;
+  margin-bottom: 60px;
+  position: relative;
+  padding: 30px;
+  background: #fafafa;
+  padding-top: 0;
+  border: 1px solid #e7e7e7;
+}
+
+#services-single .sidebar h4 {
+  background: -webkit-gradient(linear, left top, right top, from(#1e55bd), to(#437eeb));
+  background: linear-gradient(90deg, #1e55bd 0%, #437eeb 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 16px;
+  font-weight: 800;
+  font-size: 20px;
+  position: relative;
+  top: -25px;
+}
+
+#services-single .sidebar ul li {
+  margin-bottom: 15px;
+}
+
+#services-single .sidebar ul li:last-child {
+  margin: 0;
+}
+
+#services-single .sidebar ul li a {
+  font-weight: 700;
+  color: #232323;
+  text-decoration: none;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+#services-single .sidebar ul li a:hover {
+  color: #437eeb;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+
+#services-single .sidebar ul .active {
+  position: relative;
+}
+
+#services-single .sidebar ul .active::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "\f0a4";
+  font-family: "Font Awesome 5 Free";
+  color: #232323;
+}
+
+#services-single .sidebar ul .active a {
+  margin-left: 25px;
+  color: #437eeb;
+}
+
+#services-single .sidebar .btn {
+  color: #437eeb;
+  padding: 13px 40px;
+  border: 1px solid #e7e7e7;
+  font-weight: 700;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#services-single .sidebar .btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#437eeb), to(#1e55bd));
+  background: linear-gradient(90deg, #437eeb 0%, #1e55bd 100%);
+  z-index: -1;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+#services-single .sidebar .btn:hover {
+  color: #ffffff;
+}
+
+#services-single .sidebar .btn:hover::after {
+  left: 0;
+}
+
+#services-single .contant ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#services-single .contant ul li i {
+  color: #437eeb;
+  font-size: 30px;
+}
+
+#services-single .contant ul li .info {
+  padding-left: 15px;
+}
+
+#services-single .contant ul li .info span {
+  display: block;
+  font-weight: 800;
 }
 /*# sourceMappingURL=style.css.map */
