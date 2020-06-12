@@ -10,9 +10,9 @@ $(document).ready(function () {
       "border-bottom": "1px solid rgba(255, 255, 255, 0.1)",
       "background-color": "transparent",
     });
-  };    
+  }
 
-  if(window.scrollY > 0){
+  if (window.scrollY > 0) {
     if ($("#navbar").hasClass("navbar-second")) {
       $("#navbar")
         .removeClass("navbar-second")
@@ -124,6 +124,26 @@ $(document).ready(function () {
       },
     });
   }
+
+  $("#services-slider .owl-carousel").owlCarousel({
+    loop: false,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplayHoverPause: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+    },
+  });
   // ----- //
 
   // Tabs header
@@ -147,19 +167,15 @@ $(document).ready(function () {
 
   // countTo.js and move-start
   if ($("#fun-factor-area").length) {
-
-    $(window).scroll(function (e){
-      if($(window).scrollTop() >= 1900 ){
-        if($("#fun-factor-area").hasClass("start")){
+    $(window).scroll(function (e) {
+      if ($(window).scrollTop() >= 1900) {
+        if ($("#fun-factor-area").hasClass("start")) {
           $(".timer").countTo();
-          $("#fun-factor-area").removeClass("start")
-       };
-      };
+          $("#fun-factor-area").removeClass("start");
+        }
+      }
     });
-
-   
   }
-
   // ----- //
 
   // wow.js //

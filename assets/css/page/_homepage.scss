@@ -42,6 +42,8 @@
   overflow: hidden;
   .slider {
     .owl-dots {
+     .owl-dot{
+       outline: none;
       span {
         display: block;
         height: 20px;
@@ -54,6 +56,7 @@
         z-index: 1;
         box-shadow: 0 0 10px #cccccc;
       }
+    }
     }
 
     .active {
@@ -384,7 +387,6 @@
 
 #work-process {
   @extend %section-padding;
-  background-color: $section-background-color;
   overflow: hidden;
   .work-process-header {
     margin-bottom: 60px;
@@ -499,6 +501,9 @@
       }
     }
   }
+}
+.work-process-bg{
+  background-color: $section-background-color;
 }
 
 #skill {

@@ -18,7 +18,7 @@
         "sections/_pages-first-section.scss",
         "page/_homepage.scss",
         "page/_about-us-page.scss",
-        "page/_services.scss"
+        "page/_services-page.scss"
     ],
     "names": [],
     "file": "style.css"
