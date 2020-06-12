@@ -96,10 +96,10 @@ $(document).ready(function () {
   });
 
   if ($(window).width() <= 991.98) {
-    $(".dropdown").click(function (e) {
+    $(".nav-link").click(function (e) {
       e.preventDefault();
-      $(this).siblings().find(".hover-menu").slideUp();
-      $(this).find(".hover-menu").slideToggle("slow");
+      $(this).parent().siblings().find(".hover-menu").slideUp();
+      $(this).parent().find(".hover-menu").slideToggle("slow");
     });
   }
   // -----//
@@ -125,25 +125,27 @@ $(document).ready(function () {
     });
   }
 
-  $("#services-slider .owl-carousel").owlCarousel({
-    loop: false,
-    margin: 10,
-    nav: false,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: false,
-    responsive: {
-      0: {
-        items: 1,
+  if ($("#services-slider .owl-carousel").length) {
+    $("#services-slider .owl-carousel").owlCarousel({
+      loop: false,
+      margin: 10,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        },
       },
-      600: {
-        items: 2,
-      },
-      1000: {
-        items: 3,
-      },
-    },
-  });
+    });
+  }
   // ----- //
 
   // Tabs header
@@ -163,6 +165,21 @@ $(document).ready(function () {
       $(href).removeClass("hide").addClass("animate__fadeIn");
     });
   }
+  // ----- //
+
+
+  // Accordion close icon change//
+  if ($(".accordion-click").length){
+  $(".accordion-click").click(function(){
+      if($(this).children().hasClass("fa-eye-slash")){
+        $(".accordion-click").find(".fa-eye").removeClass("fa-eye").addClass("fa-eye-slash");
+        $(this).children().removeClass("fa-eye-slash").addClass("fa-eye");
+        
+      }else{
+        $(this).children().removeClass("fa-eye").addClass("fa-eye-slash");
+      }
+  });
+}
   // ----- //
 
   // countTo.js and move-start
