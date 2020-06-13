@@ -50,7 +50,7 @@ ul {
   animation: rotating 10s linear infinite;
 }
 
-#footer, #pages-first-section, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news, #data-solutions, #services-slider, #your-project, #services-single, #contact-area {
+#footer, #pages-first-section, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news, #data-solutions, #services-slider, #your-project, #services-single, #blog, #contact-area {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -3571,6 +3571,13 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   }
 }
 
+@media (max-width: 767.98px) {
+  #blog {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
 @media (max-width: 991.98px) {
   #contact-area .contact-us h2 {
     margin-top: 50px;
@@ -5449,6 +5456,106 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #services-single .contant ul li .info span {
   display: block;
   font-weight: 800;
+}
+
+#blog .card {
+  -webkit-box-shadow: 0 0 10px #cccccc;
+          box-shadow: 0 0 10px #cccccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#blog .card:last-child {
+  margin-bottom: 0px;
+}
+
+#blog .card .card-body {
+  padding: 55px 30px 30px;
+  position: relative;
+}
+
+#blog .card .card-body .date {
+  position: absolute;
+  left: 30px;
+  top: -60px;
+  color: #232323;
+  font-weight: 600;
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 10px #cccccc;
+          box-shadow: 0 0 10px #cccccc;
+  border-radius: 5px;
+}
+
+#blog .card .card-body .date strong {
+  display: block;
+}
+
+#blog .card .card-body a {
+  margin-top: 7px;
+  color: #437eeb;
+  padding: 13px 40px;
+  border: 1px solid #e7e7e7;
+  font-weight: 700;
+  font-size: 15px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#blog .card .card-body a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  top: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#437eeb), to(#1e55bd));
+  background: linear-gradient(90deg, #437eeb 0%, #1e55bd 100%);
+  z-index: -1;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+#blog .card .card-body a:hover {
+  color: #ffffff;
+}
+
+#blog .card .card-body a:hover::after {
+  left: 0;
+}
+
+#blog .card .card-body h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#blog .card .card-body h6 {
+  font-size: 13px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+#blog .card .card-body h6 i {
+  color: #437eeb;
+  margin-right: 8px;
+}
+
+#blog .btn-group button {
+  margin: 5px 5px;
+  line-height: 1.2px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  color: #437eeb;
+}
+
+#blog .btn-group button.active {
+  color: #ffffff;
+  background-color: #437eeb;
+  border-color: #437eeb;
 }
 
 #contact-area .contact-item {

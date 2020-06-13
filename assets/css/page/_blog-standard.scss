@@ -1,0 +1,63 @@
+#blog {
+  @extend %section-padding;
+  .card {
+    box-shadow: 0 0 10px #cccccc;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
+    .card-body {
+      padding: 55px 30px 30px;
+      position: relative;
+      .date {
+        position: absolute;
+        left: 30px;
+        top: -60px;
+        color: $black-color;
+        font-weight: 600;
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: $white-color;
+        box-shadow: 0 0 10px #cccccc;
+        border-radius: 5px;
+        strong {
+          display: block;
+        }
+      }
+      a {
+        margin-top: 7px;
+        @include btn-transform($primary-color, $white-color);
+      }
+      h4 {
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      h6 {
+        font-size: 13px;
+        color: $gray-color;
+        margin-bottom: 20px;
+        i {
+          color: $primary-color;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .btn-group {
+      button{
+        margin: 5px 5px;
+        line-height: 1.2px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        border: 1px solid #dee2e6;
+        color: $primary-color;
+        &.active{
+            color: $white-color;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+      }
+  }
+}
