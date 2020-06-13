@@ -50,7 +50,7 @@ ul {
   animation: rotating 10s linear infinite;
 }
 
-#footer, #pages-first-section, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news, #data-solutions, #services-slider, #your-project, #services-single {
+#footer, #pages-first-section, #first-slider, #fun-factor-area, #services, #work-process, #skill, #testimonials, #news, #data-solutions, #services-slider, #your-project, #services-single, #contact-area {
   padding-top: 120px;
   padding-bottom: 120px;
 }
@@ -3572,6 +3572,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 @media (max-width: 991.98px) {
+  #contact-area .contact-us h2 {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 991.98px) {
   #footer .copyright {
     text-align: center;
     padding: 0;
@@ -5443,5 +5449,135 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 #services-single .contant ul li .info span {
   display: block;
   font-weight: 800;
+}
+
+#contact-area .contact-item {
+  padding: 50px 37px;
+  -webkit-box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+          box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+  position: relative;
+  background-color: #ffffff;
+  display: block;
+}
+
+#contact-area .contact-item ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #dddddd;
+}
+
+#contact-area .contact-item ul li:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border-bottom: none;
+}
+
+#contact-area .contact-item ul li i {
+  font-size: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#1e55bd), to(#437eeb));
+  background: linear-gradient(90deg, #1e55bd 0%, #437eeb 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+#contact-area .contact-item ul li .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 20px;
+}
+
+#contact-area .contact-item ul li .info span {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #232323;
+}
+
+#contact-area .contact-item::after {
+  position: absolute;
+  right: -15px;
+  top: 15px;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: #ffffff;
+  z-index: -1;
+  -webkit-box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+          box-shadow: 0 5px 30px 0 rgba(214, 215, 216, 0.57);
+}
+
+#contact-area .contact-us {
+  padding-left: 50px;
+}
+
+#contact-area .contact-us h2 {
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+#contact-area .contact-us form input {
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  height: 50px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+#contact-area .contact-us form input:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#contact-area .contact-us form textarea {
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  width: 100%;
+  height: 150px;
+}
+
+#contact-area .contact-us form textarea:focus {
+  border-color: #80bdff;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  margin-bottom: 1rem;
+}
+
+#contact-area .contact-us form button {
+  font-weight: 700;
+  padding: 10px 35px;
+  border: 2px solid #e7e7e7;
+  margin-top: 15px;
+}
+
+#contact-area .contact-us form button i {
+  margin-left: 5px;
+  display: inline-block;
+  background: -webkit-gradient(linear, left top, right top, from(#1e55bd), to(#437eeb));
+  background: linear-gradient(90deg, #1e55bd 0%, #437eeb 100%);
+  color: #ffffff;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+}
+
+#map-adress {
+  background-color: #111d30;
 }
 /*# sourceMappingURL=style.css.map */
