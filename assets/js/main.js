@@ -167,19 +167,20 @@ $(document).ready(function () {
   }
   // ----- //
 
-
   // Accordion close icon change//
-  if ($(".accordion-click").length){
-  $(".accordion-click").click(function(){
-      if($(this).children().hasClass("fa-eye-slash")){
-        $(".accordion-click").find(".fa-eye").removeClass("fa-eye").addClass("fa-eye-slash");
+  if ($(".accordion-click").length) {
+    $(".accordion-click").click(function () {
+      if ($(this).children().hasClass("fa-eye-slash")) {
+        $(".accordion-click")
+          .find(".fa-eye")
+          .removeClass("fa-eye")
+          .addClass("fa-eye-slash");
         $(this).children().removeClass("fa-eye-slash").addClass("fa-eye");
-        
-      }else{
+      } else {
         $(this).children().removeClass("fa-eye").addClass("fa-eye-slash");
       }
-  });
-}
+    });
+  }
   // ----- //
 
   // countTo.js and move-start
