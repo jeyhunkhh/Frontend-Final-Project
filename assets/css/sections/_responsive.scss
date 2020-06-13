@@ -352,6 +352,29 @@
 }
 // ----- // 
 
+// Blog-single // 
+@media (max-width: 767.98px){
+  #single-card{
+    padding-top: 50px !important;
+    .card{
+      .card-body{
+        .buttons{
+          flex-direction: column !important;
+          justify-content: center !important;
+          a{
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  #comments{
+    padding-bottom: 50px !important;
+  }
+}
+// ----- // 
+
 // Contact //
 @media (max-width: 991.98px){
   #contact-area{

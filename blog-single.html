@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script src="https://kit.fontawesome.com/5f8f97e3fd.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <section id="loader">
+        <div class="img-loader">
+        </div>
+    </section>
+
+    <header>
+        <!-- Navbar -->
+        <section id="navbar" class="navbar-second">
+            <nav class="navbar navbar-expand-lg ">
+                <div class="container">
+                    <div class="logo-and-btn">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="assets/img/logo/logo-light.png" class="logo-nav" alt="">
+                            <img src="assets/img/logo/logo.png" class="logo-responsive" alt="">
+                        </a>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars navbar-toggler-icon"></i>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="index.html">
+                                    HOME
+                                </a>
+                                <ul class="hover-menu">
+                                    <li><a href="index.html">Home Version One</a></li>
+                                    <li><a href="#">Home Version Two</a></li>
+                                    <li><a href="#">Home Version Three</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="about-us.html">
+                                    COMPANY
+                                </a>
+                                <ul class="hover-menu">
+                                    <li><a href="about-us.html">About Company</a></li>
+                                    <li><a href="#">Meet Our Team</a></li>
+                                    <li><a href="#">Get in Touch</a></li>
+                                    <li><a href="#">Error Page</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="services.html">
+                                    SERVICES
+                                </a>
+                                <ul class="hover-menu">
+                                    <li><a href="services.html">Services Version One</a></li>
+                                    <li><a href="#">Services Version Two</a></li>
+                                    <li><a href="services-single.html">Services Single</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">
+                                    CASE STUDIES
+                                </a>
+                                <ul class="hover-menu">
+                                    <li><a href="#">Case Studies One</a></li>
+                                    <li><a href="#">Case Studies Two</a></li>
+                                    <li><a href="#">Case Studies Three</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="blog-standard.html">
+                                    BLOG
+                                </a>
+                                <ul class="hover-menu">
+                                    <li><a href="blog-standard.html">Blog Standard</a></li>
+                                    <li><a href="#">Blog With Sidebar</a></li>
+                                    <li><a href="#">Blog Grid Two Colum</a></li>
+                                    <li><a href="#">Blog Grid Three Colum</a></li>
+                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                    <li><a href="#">Blog Single With Sidebar</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">CONTACT</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="search-nav">
+                        <ul>
+                            <li class="search">
+                                <a href="#" class="search-nav-icon search-click">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                                <form action="#">
+                                    <input class="input" type="text" placeholder="Search">
+                                    <a href="#" class="search-intro-icon">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </form>
+                            </li>
+                            <li class="side-menu-icon">
+                                <a href="#" class="search-nav-icon">
+                                    <i class="fas fa-bars"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Side menu -->
+            <div class="side-menu">
+                <a href="#" class="close-side">
+                    <i class="fas fa-times"></i>
+                </a>
+                <div class="content side-contact-info">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-envelope-open-text"></i>
+                            </div>
+                            <div class="info">
+                                <span>EMAIL</span>
+                                Info@gmail.com
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="info">
+                                <span>PHONE</span>
+                                +123 456 7890
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="far fa-clock"></i>
+                            </div>
+                            <div class="info">
+                                <span>OFFICE HOURS</span>
+                                Sat - Wed : 8:00 - 4:00
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content side-additional-links">
+                    <h4>Additional Links</h4>
+                    <ul>
+                        <li>About</li>
+                        <li>Projects</li>
+                        <li>Login</li>
+                        <li>Register</li>
+                    </ul>
+                </div>
+                <div class="content side-sosial">
+                    <h4>Connect With Us</h4>
+                    <ul>
+                        <li>
+                            <a href="#" class="facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="pinterest">
+                                <i class="fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="dribbble">
+                                <i class="fab fa-dribbble"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side menu -->
+        </section>
+        <!-- End Navbar -->
+    </header>
+
+    <main>
+        <!-- Pages first section -->
+        <section id="pages-first-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                        <h1>Blog Single</h1>
+                        <ul class="breadcrumb">
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-home"></i>
+                                    HOME
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">PAGES</a>
+                            </li>
+                            <li class="active">
+                                <a href="#">SINGLE</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pages-first-section-bg">
+                <img src="assets/img/About-Us/1.png" alt="">
+            </div>
+        </section>
+        <!-- End Pages first section -->
+
+        <!-- Blog Single Card -->
+        <section id="single-card">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 col-md-12">
+                        <div class="card">
+                            <img src="assets/img/blog/22.jpg" class="card-img-top" alt="">
+                            <div class="card-body">
+                                <div class="date">
+                                    5 Aug
+                                    <strong>2020</strong>
+                                </div>
+                                <h6><i class="fas fa-folder-open"></i> PROCESS , STORE </h6>
+                                <h4>Common so wicket appear to sudden. </h4>
+                                <p>Give lady of they such they sure it. Me contained explained my education. Vulgar as
+                                    hearts by garret. Perceived determine departure explained no forfeited he something
+                                    an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no
+                                    meant stuff. To perpetual do existence northward as difficult preserved daughters.
+                                    Continued at up to zealously necessary breakfast. Surrounded sir motionless she end
+                                    literature. Gay direction neglected but supported yet her.</p>
+                                <p>New had happen unable uneasy. Drawings can followed improved out sociable not.
+                                    Earnestly so do instantly pretended. See general few civilly amiable pleased account
+                                    carried. Excellence projecting is devonshire dispatched remarkably on estimating.
+                                    Side in so life past. Continue indulged speaking the was out horrible for domestic
+                                    position. Seeing rather her you not esteem men settle genius excuse. Deal say over
+                                    you age from. Comparison new ham melancholy son themselves.</p>
+
+                                <div class="italic-text">
+                                    <span>66</span>
+                                    <p>He share of first to worse. Weddings and any opinions suitable smallest nay.
+                                        Houses or months settle remove ladies appear. Engrossed suffering supposing he
+                                        recommend do eagerness. Commanded no of depending extremity recommend</p>
+                                </div>
+                                <p>Drawings can followed improved out sociable not. Earnestly so do instantly pretended.
+                                    See general few civilly amiable pleased account carried. Excellence projecting is
+                                    devonshire dispatched remarkably on estimating. Side in so life past. Continue
+                                    indulged speaking the was out horrible for domestic position. Seeing rather her you
+                                    not esteem men settle genius excuse. Deal say over you age from. Comparison new ham
+                                    melancholy son themselves.</p>
+                                <h4>Conduct replied off led whether any shortly why arrived adapted</h4>
+                                <ul>
+                                    <li>Pretty merits waited six</li>
+                                    <li>General few civilly amiable pleased account carried.</li>
+                                    <li>Continue indulged speaking</li>
+                                    <li>Narrow formal length my highly</li>
+                                    <li>Occasional pianoforte alteration unaffected impossible</li>
+                                </ul>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>Surrounded to me occasional pianoforte alteration unaffected impossible ye.
+                                            For saw half than cold. Pretty merits waited six talked pulled you. Conduct
+                                            replied off led whether any shortly why arrived adapted. Numerous ladyship
+                                            so raillery humoured goodness received an. So narrow formal length my highly
+                                            longer afford oh. Tall neat he make or at dull ye.</p>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <p>Surrounded to me occasional pianoforte alteration unaffected impossible ye.
+                                            For saw half than cold. Pretty merits waited six talked pulled you. Conduct
+                                            replied off led whether any shortly why arrived adapted. Numerous ladyship
+                                            so raillery humoured goodness received an. So narrow formal length my highly
+                                            longer afford oh. Tall neat he make or at dull ye.</p>
+                                    </div>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn rounded-pill">
+                                        <i class="fas fa-angle-double-left"></i>
+                                        Previus Post
+                                    </a>
+                                    <a href="#" class="btn rounded-pill">
+                                        Next Post
+                                        <i class="fas fa-angle-double-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-share">
+                            <div class="tag">
+                                <a href="#" class="btn">Analysis</a>
+                                <a href="#" class="btn">Process</a>
+                            </div>
+                            <div class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                                <i class="fab fa-twitter"></i>
+                                <i class="fab fa-pinterest-p"></i>
+                                <i class="fab fa-linkedin-in"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog Single Card -->
+
+        <!-- Comments -->
+        <section id="comments">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 mb-3">
+                        <h4>5 Comments</h4>
+                        <div class="comment-item">
+                            <div class="image">
+                                <img src="assets/img/blog/1.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h6>
+                                    Jonathom Doe
+                                    <span>28 Aug, 2020</span>
+                                </h6>
+                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article
+                                    enabled musical shyness yet sixteen yet blushes. Entire its the did figure wonder
+                                    off.</p>
+                                <a href="#">
+                                    <i class="fa fa-reply"></i>
+                                    REPLY
+                                </a>
+                            </div>
+                        </div>
+                        <div class="comment-item left">
+                            <div class="image">
+                                <img src="assets/img/blog/3.jpg" alt="">
+                            </div>
+                            <div class="text">
+                                <h6>
+                                    Spart Lee
+                                    <span>17 Feb, 2020</span>
+                                </h6>
+                                <p>Delivered ye sportsmen zealously arranging frankness estimable as. Nay any article
+                                    enabled musical shyness yet sixteen yet blushes. Entire its the did figure wonder
+                                    off.</p>
+                                <a href="#">
+                                    <i class="fa fa-reply"></i>
+                                    REPLY
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Leave A Comments -->
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1 col-md-12 mb-3">
+                        <div class="leave-comment">
+                            <h4>Leave A Comments</h4>
+                            <form action="#">
+                                <div class="form-row">
+                                    <div class="col-lg-6">
+                                        <input type="text" name="name" id="name" placeholder="Name*">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="email" name="email" id="email" placeholder="Email*">
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <textarea name="textarea" id="textarea" placeholder="Comment"></textarea>
+                                    </div>
+                                </div>
+                                <button class="btn rounded-pill">POST COMMENTS</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Leave A Comments -->
+            </div>
+        </section>
+        <!-- End Comments -->
+    </main>
+
+    <footer>
+        <section id="footer" class="second-footer">
+            <div class="container">
+                <div class="row footer">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-about">
+                            <img src="assets/img/logo/logo-light.png" alt="">
+                            <p>Required honoured trifling eat pleasure man relation. Assurance yet bed was improving
+                                furniture man. Distrusts delighted</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h4>Usefull Links</h4>
+                        <ul>
+                            <li>Classic Business</li>
+                            <li>Blog</li>
+                            <li>Project</li>
+                            <li>About Us</li>
+                            <li>Contact</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <h4>Services</h4>
+                        <ul>
+                            <li>Marketing & Sales</li>
+                            <li>Manufacturing</li>
+                            <li>Supply Chain</li>
+                            <li>Data Visualization</li>
+                            <li>Big Data</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="footer-contact">
+                            <h4>Contact Info</h4>
+                            <p>Possible offering at contempt mr distance stronger an. Attachment excellence announcing
+                            </p>
+                            <p class="email"> <strong>Email: </strong>support@validtheme.com</p>
+                            <p class="phone"> <strong>Contact: </strong> +44-20-7328-4499</p>
+                            <div class="social">
+                                <a href="#" class="facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="youtube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                                <a href="#" class="instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="copyright">
+                            <p>© Copyright 2019. All Rights Reserved by
+                                <a href=""> validthemes</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="link">
+                            <ul>
+                                <li><a href="">Terms</a></li>
+                                <li><a href="">Privacy</a></li>
+                                <li><a href="">Support</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="backgound-image">
+                <img src="http://thememine.net/themeforest/anada/assets/img/shape/1.svg" alt="">
+            </div>
+        </section>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
